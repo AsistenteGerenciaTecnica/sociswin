@@ -1,0 +1,15 @@
+﻿# Dolibarr language file - es_CO 
+CHARSET=UTF-8
+cotinm=Cotizaciones de Inmobiliaria
+TabCotinm=Cotizaciones de Inmobiliaria
+TabFacturaCotinm=Cotizaciones de Inmobiliaria
+TabPedidoCotinm=Cotizaciones de Inmobiliaria
+cotinm_factura_encabezado = Definir los valores de descuentos para la factura
+cotinm_presupuesto_encabezado = Definir los valores de descuentos para la cotización
+cotinm_administracion = Comisión Administración
+cotinm_seguros = Seguros
+cotinm_gravamen = Gravamen
+cotinm_costo_transaccion = Costo Transacción
+cotinm_forma_aplicar = Aplicar como
+Developer = Desarrollador de software
+Company = Ultimate Technology S.A.S

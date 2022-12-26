@@ -1,0 +1,284 @@
+html {
+    font-family: arial, tahoma, verdana helvetica;
+}
+
+:root {
+    --bg-color-header: #E9E9ED;
+    --bg-color-header-abitdarker: #dbdbdf;
+    --text-color-header: #9B75A6;
+
+    --bg-color-td: rgba(241, 241, 241, 0.609);
+}
+
+button[disabled] {
+    filter: opacity(50%);
+}
+
+.eval_table {
+    
+    width: 100%;
+
+}
+
+.eval_row > td,
+.eval_row > th {
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.eval_row > td > div,
+.eval_row > th > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    flex-wrap: wrap;
+}
+
+.eval_row > th {
+    background-color: var(--bg-color-header);
+    color: var(--text-color-header);
+
+    font-weight: bold;    
+}
+
+.eval_row > td {
+    background-color: var(--bg-color-td);
+}
+
+.col_none {
+    background-color: transparent !important;
+}
+
+.col_categoria {
+    width: 20%;
+    max-width: 150px;
+}
+
+.col_calificacion {
+    width: 10%;
+    max-width: 150px;
+}
+
+.col_comentario{
+    width: 20%;
+    max-width: 150px;
+}
+
+.col_pregunta {
+    width: 50%;
+    max-width: 150px;
+}
+
+.col_edit {
+    width: 20%;
+    max-width: 150px;
+}
+
+.table_form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-bottom: 10px;    
+}
+
+.table_form_row > td > * {
+
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+
+}
+
+.evalCheckBox {
+    width: 30px;
+    height: 30px;
+}
+
+.evalInput {
+    width: 100px;
+    height: 30px;
+
+    text-align: center;
+}
+
+.eval_info {
+    display: flex;
+    background-color: var(--bg-color-header);
+    
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.eval_score {
+    font-size: 16pt;
+    background-color: var(--bg-color-header-abitdarker);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.eval_score > * {
+    margin-right: 10px;
+}
+
+.eval_score_score {
+    background-color: lightgray;
+    border-radius: 5px;
+
+    padding: 10px;
+}
+
+.bad {
+    background-color: rgb(218, 0, 0) !important;
+}
+
+.average {
+    background-color: rgb(255, 165, 0) !important;
+}
+
+.good {
+    background-color: rgb(0, 201, 0) !important;
+}
+
+.badtr
+{
+    background-color: rgb(218, 0, 0, 0.5) !important;
+}
+.averagetr {
+    background-color: rgb(255, 165, 0, 0.5) !important;
+}
+
+.goodtr {
+    background-color: rgb(0, 201, 0, 0.5) !important;
+}
+
+
+.table_btn
+{
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.table_btn:hover
+{
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*
+
+MODAL 
+
+*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+
+    left: 0;
+    top: 0;
+
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    
+    z-index: 99;
+
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal_container {
+    display: block;
+
+    background-color: #FFFFFF;
+    margin: auto; 
+    padding: 10px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+    border-radius: 5px;
+
+    width: fit-content; 
+    /* min-width: 40%;  *//* Could be more or less, depending on screen size */
+    /* max-width: 80%; */
+}
+
+.modal_content {
+    margin-top: 10px;
+    /* width: 100%; */
+
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.modal_title {
+    display: flex;
+    justify-content: space-between;
+
+    /* width: 100%; */
+
+    background-color: #D2D2D2;
+
+    border-radius: 5px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.modal_button {
+    background-color: #D2D2D2;
+
+    text-align: center;
+
+    line-height: 10px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+
+    padding-top:    5px;
+    padding-bottom: 5px;
+    padding-left:   5px;
+    padding-right:  5px;
+}
+
+.modal_button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.modal_bottom {
+    display: flex;
+    justify-content: flex-start;   
+
+    margin-top: 25px;
+}
+
+.modal_bottom > .modal_button {
+    margin-left: 5px;
+}

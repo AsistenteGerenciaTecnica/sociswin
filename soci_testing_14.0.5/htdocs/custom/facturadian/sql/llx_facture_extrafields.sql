@@ -1,0 +1,16 @@
+ALTER TABLE llx_facture_extrafields ADD `invoicetypecode` varchar(255) COLLATE utf8_unicode_ci NOT NULL;
+ALTER TABLE llx_facture_extrafields ADD `envio` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `cufe` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `zipkey` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `isvalid` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `statuscode` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `statusdescription` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `success` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `pdf21` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `messageid` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `dateevento` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `processedmessage` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `evento` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `condicion` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `condicionmsg` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE llx_facture_extrafields ADD `errormessage` text COLLATE utf8_unicode_ci DEFAULT NULL; 

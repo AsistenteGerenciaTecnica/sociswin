@@ -1,0 +1,15 @@
+﻿# Dolibarr language file - fr_FR
+CHARSET=UTF-8
+cotinm = Soumissions immobilières
+TabCotinm = Soumissions immobilières
+TabFacturaCotinm = Soumissions immobilières
+TabPedidoCotinm = Soumissions immobilières
+cotinm_factura_encabezado = Définir les valeurs de remise pour la facture
+cotinm_presupuesto_encabezado = Définir les valeurs de remise pour la commande
+cotinm_administracion = Commission administrative
+cotinm_seguros = Assurance
+cotinm_gravamen = Évaluation
+cotinm_costo_transaccion = Coût de Transaction
+cotinm_forma_aplicar = Apliquer comme
+Developer = Développeur de logiciels
+Company = Ultimate Technology S.A.S

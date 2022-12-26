@@ -1,0 +1,13 @@
+CREATE TABLE `llx_evalprov_evaluacion` ( 
+`rowid` INT(11) NOT NULL AUTO_INCREMENT, 
+`fk_orden` INT(11) NOT NULL , 
+`ref` VARCHAR(10) NOT NULL , 
+`calificacion` FLOAT(6,3) NOT NULL DEFAULT '0' , 
+`fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+`fk_user_modif` INT(11) NOT NULL , 
+`tms` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+`date_creation` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+PRIMARY KEY (`rowid`), 
+UNIQUE (`fk_orden`), 
+UNIQUE (`ref`)) 
+ENGINE = InnoDB;

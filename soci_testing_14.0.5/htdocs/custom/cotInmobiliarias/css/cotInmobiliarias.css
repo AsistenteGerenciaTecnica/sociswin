@@ -1,0 +1,24 @@
+fieldset.cotinm_box
+{
+	float:left;
+	width:19%;
+	min-height:200px;
+	margin:12px;
+}
+
+fieldset.administracion
+{
+	background-color:#FFE1E1;
+}
+fieldset.seguros
+{
+	background-color:#FFFF64;
+}
+fieldset.gravamen
+{
+	background-color:#CACAFF;
+}
+fieldset.costo_transaccion
+{
+	background-color:#caf4ff;
+}

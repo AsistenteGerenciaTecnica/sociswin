@@ -1,0 +1,10 @@
+#divmensaje {
+	/*estilos para el mensaje de javascript al momento de poner el mouse sobre el link de una orden de servicio*/
+    background-color: white;
+    color: black;
+    position: absolute; 
+    visibility: hidden; 
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 2px 2px 5px #999;
+}

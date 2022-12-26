@@ -1,0 +1,2 @@
+ALTER TABLE `llx_commande_fournisseur_extrafields` ADD `orden_evaluada` BOOLEAN NULL DEFAULT FALSE AFTER `import_key`;
+ALTER TABLE `llx_commande_fournisseur_extrafields` ADD `orden_calificacion` VARCHAR(20) NULL DEFAULT 0 AFTER `orden_evaluada`;

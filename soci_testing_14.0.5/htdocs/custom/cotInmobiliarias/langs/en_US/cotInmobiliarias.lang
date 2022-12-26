@@ -1,0 +1,15 @@
+﻿# Dolibarr language file - en_US 
+CHARSET=UTF-8
+cotinm = Real State Quotations
+TabCotinm = Real State Quotations
+TabFacturaCotinm = Real State Quotations
+TabPedidoCotinm = Real State Quotations
+cotinm_factura_encabezado = Define the discount values for the invoice
+cotinm_presupuesto_encabezado = Define the discount values for the order
+cotinm_administracion = Administration Commission
+cotinm_seguros = Insurances
+cotinm_gravamen = Assessment
+cotinm_costo_transaccion = Transaction Cost
+cotinm_forma_aplicar = Apply as
+Developer = Software Developer
+Company = Ultimate Technology S.A.S
