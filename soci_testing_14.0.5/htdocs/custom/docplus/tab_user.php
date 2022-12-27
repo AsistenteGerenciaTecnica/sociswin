@@ -31,7 +31,7 @@ $eval_ref = "EVAL-".$id;
 // Módulo de la página actual
 $modulo = "user";
 
-$back = DOL_URL_ROOT .'/custom/docplus/tab_usuario.php';
+$back = DOL_URL_ROOT .'/custom/docplus/tab_user.php';
 
 $object = new User($db);
 if ($id > 0)

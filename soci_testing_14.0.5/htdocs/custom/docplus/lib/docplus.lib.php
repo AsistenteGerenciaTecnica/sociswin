@@ -10,12 +10,13 @@ require_once DOL_DOCUMENT_ROOT.'/custom/docplus/class/campo.class.php';
  * SUBIR ARCHIVOS
  * 
  * 
- * @param   $tmp_file   string  Cadena con la ubicación temporal del archivo subido
- * @param   $filename   string  Nombre original del archivo
- * @param   $obs_id     int     ID de la observación
+ * @param   string      $tmp_file   Cadena con la ubicación temporal del archivo subido
+ * @param   string      $filename   Nombre original del archivo
+ * @param   string      $modulo     Módulo al que pertenece el documento
+ * @param   int         $obj_id     ID de la observación
+ * @param   int         $doc_id     ID del documento
  * 
- * @return  $location   string  Dirección en la que se guardó el archivo
- * @return  false       bool    Si no se guardó el archivo
+ * @return  string|bool      Dirección en la que se guardó el archivo | false
  *                              
  * 
  */
@@ -64,10 +65,12 @@ require_once DOL_DOCUMENT_ROOT.'/custom/docplus/class/campo.class.php';
  * ELIMINAR ARCHIVO
  * 
  * 
- * @param   $obs_id         int     ID de la observación
- * @param   $filename       string  Nombre original del archivo
+ * @param   int         $obj_id     ID del objeto
+ * @param   int         $doc_id     ID del documento
+ * @param   string      $filename   Nombre original del archivo
+ * @param   string      $modulo     Módulo al que pertenece el documento
  * 
- * @return  $res            int     Resultado positivo si salió bien, negativo si no
+ * @return  int         $res     Resultado positivo si salió bien, negativo si no
  * 
  * Crea la dirección de la carpeta donde se guarda la imagen
  * Genera la dirección del archivo
@@ -100,6 +103,11 @@ require_once DOL_DOCUMENT_ROOT.'/custom/docplus/class/campo.class.php';
 
 /**
  * Obtener los objetos padre de las carpetas
+ * 
+ * @param   Carpeta     $carpeta        Carpeta a evaluar
+ * @param   array       $parent_list    Lista de padres actual
+ * 
+ * @return  array       $parent_list    Lista de padres obtenida
  */
 function folder_parents($carpeta, $parent_list)
 {
@@ -127,6 +135,13 @@ function folder_parents($carpeta, $parent_list)
     return $parent_list;
 }
 
+/**
+ * Obtener los elementos padre de un documento o una carpeta
+ * 
+ * @param   Documento|Carpeta   $object     Objeto del que obtener los padres
+ * 
+ * @return  string  $parents    Padres del objeto, separados por ","
+ */
 function get_parents($object)
 {
     global $db;
@@ -158,37 +173,13 @@ function get_parents($object)
     return $parents;
 }
 
-/* function get_folder_parents($carpeta)
-{
-    global $db;
-
-    $parent_list = array();
-    if ($carpeta->tipo_parent == "carpeta")
-    {
-        $carpeta = new Carpeta($db);
-        $carpeta->fetch($carpeta->fk_parent);
-        
-        $parent_list = folder_parents($carpeta, $parent_list);
-    }
-    else if ($carpeta->tipo_parent == "categoria")
-    {
-        $parent_list[] = $carpeta->fk_parent;
-    }
-    
-    $parents = "";
-    for ($i = 0; $i < count($parent_list); $i++) 
-    {
-        $parents .= $parent_list[$i];
-        
-        if ($i + 1 < count($parent_list))
-        {
-            $parents .= ",";
-        }
-    }
-    
-    return $parents;
-} */
-
+/**
+ * Obtener el listado de archivos en una carpeta
+ * 
+ * @param   string  $path   Dirección de la carpeta
+ * 
+ * @return  array   $files  Listado de archivos dentro de la carpeta
+ */
 function get_doc_files($path)
 {
     $files = array();

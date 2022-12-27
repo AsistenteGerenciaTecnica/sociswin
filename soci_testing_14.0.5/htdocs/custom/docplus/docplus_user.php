@@ -593,7 +593,7 @@ if (count($usuarios) > 0)
 
 				$parents = get_parents($documento);
 
-				echo '<a href="'. DOL_URL_ROOT .'/custom/docplus/tab_usuario.php?id='. $usuario->id .'&open_doc='. $documento->id .'&open='. $parents .'">';
+				echo '<a href="'. DOL_URL_ROOT .'/custom/docplus/tab_user.php?id='. $usuario->id .'&open_doc='. $documento->id .'&open='. $parents .'">';
 				echo $documento->nombre;
 				echo '</a>';
 				echo '</div>';

@@ -71,7 +71,7 @@ class modDocPlus extends DolibarrModules
 
 		// Array to add new pages in new tabs
 		$this->tabs = array(
-			'user:+TabUsuario:Documentos+:@docplus:/docplus/tab_usuario.php?id=__ID__',
+			'user:+TabUsuario:Documentos+:@docplus:/docplus/tab_user.php?id=__ID__',
 		);
 		
 		// dictionnarys
@@ -166,7 +166,14 @@ class modDocPlus extends DolibarrModules
 	 */
 	function load_tables()
 	{
-		return $this->_load_tables('/docplus/sql/');
+		try
+		{
+			return $this->_load_tables('/docplus/sql/');
+		}
+		catch (Exception $ex)
+		{
+			return 1;
+		}
 	}
 }
 ?>
